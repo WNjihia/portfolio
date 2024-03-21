@@ -237,7 +237,8 @@ body {
 }
 
 .button-link:hover{
-    background-color: var(--text-color);
+    background-color: var(--highlight-pink);
+    border-color: var(--highlight-pink);
     color: var(--highlight-text-color);
 }
 
