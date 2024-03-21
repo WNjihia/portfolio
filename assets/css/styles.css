@@ -16,8 +16,7 @@
     --highlight-pink: #d946ef;
 }
 
-html,
-body {
+html {
     width: 100%;
     height: 100%;
     font-family: 'Karla', sans-serif;
@@ -25,13 +24,18 @@ body {
     align-items: center;
     justify-content: center;
     line-height: 1.7;
-    /* color: #222; */
     font-size: 19px;
     background-color: var(--bg-color);
     text-align: center;
+    transition: background 0.2s linear;
+}
+
+body {
+    max-width: 100%;
 }
 
 @media only screen and (min-width: 1600px) {
+
     body {
         width: 50%;
     }
@@ -54,6 +58,59 @@ body {
     }
 }
 
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.theme-switch {
+    background-color: #222;
+    width: 49px;
+    height: 28px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.fa-moon {
+    color: var(--highlight-pink)
+}
+
+.fa-sun {
+    color: var(--highlight-pink)
+}
+
+.theme-switch .ball {
+    background-color: var(--highlighted-text-color);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.theme-switch .ball {
+    transform: translateX(26px);
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -71,7 +128,7 @@ body {
     width: 230px;
     background-color: darkviolet;
     overflow: hidden;
-    box-shadow: 1px 1px 27px 2px rgba(102,21,122,0.67);
+    box-shadow: 1px 1px 27px 2px rgba(102, 21, 122, 0.67);
 }
 
 .profile-image {
@@ -82,16 +139,10 @@ body {
 .title {
     font-family: 'Abril Fatface', cursive;
     font-weight: 400;
-    /* letter-spacing: .17em; */
     white-space: nowrap;
-    /* color: var(--text-color) */
 }
 
 #typed-strings {
-    /* font-family: 'Abril Fatface', cursive;
-    font-weight: 400;
-    letter-spacing: .17em;
-    white-space: nowrap; */
     display: none;
 }
 
@@ -109,7 +160,6 @@ body {
 
 .text.pink {
     color: var(--highlight-pink);
-    /* background-color: var(--highlight-pink); */
 }
 
 .typed-cursor {
@@ -224,7 +274,7 @@ body {
     background-color: #e1306c;
 }
 
-.button-link{
+.button-link {
     border: 2px solid;
     border-color: var(--text-color);
     color: var(--text-color);
@@ -234,7 +284,7 @@ body {
     font-size: 16px;
 }
 
-.button-link:hover{
+.button-link:hover {
     background-color: var(--highlight-pink);
     border-color: var(--highlight-pink);
     color: var(--highlighted-text-color);
@@ -247,7 +297,7 @@ body {
     color: #f94877;
 } */
 
-.comms-text{
+.comms-text {
     padding-left: 10px;
 }
 
