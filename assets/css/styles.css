@@ -1,21 +1,19 @@
 :root {
     --bg-color: #eee;
-    --text-color: black;
-    --text-pink: #f94877;
-    --highlight-text-color: white;
-    --github-color: #222;
-    --medium-color: #222;
+    --text-color: #222;
+    --highlighted-text-color: #eee;
+    --github-medium-color: #222;
+    --github-medium-bg-color-hover: #222;
     --highlight-pink: #d946ef;
 }
 
 [data-theme="dark"] {
-    --bg-color: #0f172a;
-    --text-color: #cbd5e1;
-    --text-pink: #f0abfc;
-    --highlight-pink: #f0abfc;
-    --highlight-text-color: #d946ef;
-    --github-color: white;
-    --medium-color: white;
+    --bg-color: #111;
+    --text-color: #eee;
+    --highlighted-text-color: #eee;
+    --github-medium-color: white;
+    --github-medium-bg-color-hover: #000;
+    --highlight-pink: #d946ef;
 }
 
 html,
@@ -27,7 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     line-height: 1.7;
-    color: #222;
+    /* color: #222; */
     font-size: 19px;
     background-color: var(--bg-color);
     text-align: center;
@@ -106,7 +104,7 @@ body {
 
 .highlight.pink {
     background: var(--highlight-pink);
-    color: var(--highlight-text-color);
+    color: var(--highlighted-text-color);
 }
 
 .text.pink {
@@ -190,28 +188,28 @@ body {
 }
 
 .github>i {
-    color: var(--github-color);
+    color: var(--github-medium-color);
 }
 
 .github:hover>i {
-    /* color: var(--github-color); */
-    color: var(--highlight-text-color);
+    /* color: var(--github-medium-color); */
+    color: var(--highlighted-text-color);
 }
 
 .github:hover {
-    background-color: #222;
+    background-color: var(--github-medium-bg-color-hover);
 }
 
 .medium>i {
-    color: var(--medium-color);
+    color: var(--github-medium-color);
 }
 
 .medium:hover>i {
-    color: var(--highlight-text-color);
+    color: var(--highlighted-text-color);
 }
 
 .medium:hover {
-    background-color: #222;
+    background-color: var(--github-medium-bg-color-hover);
 }
 
 .instagram>i {
@@ -239,7 +237,7 @@ body {
 .button-link:hover{
     background-color: var(--highlight-pink);
     border-color: var(--highlight-pink);
-    color: var(--highlight-text-color);
+    color: var(--highlighted-text-color);
 }
 
 /* .button-link>img{
